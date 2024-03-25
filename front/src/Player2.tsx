@@ -110,7 +110,6 @@ function Player({name}){
         formData.append('file', file)
 
         setUrl('');
-        setStatus(0.01)
         
 
         fetch(`${BACKEND}/upload`, {
@@ -124,6 +123,7 @@ function Player({name}){
         }).then(data=>{
             console.log("RESPONSE IS " ,    data.filename)
             localStorage.setItem(name, data.filename)
+            setStatus(0.01)
             // startIt()
           }).catch(error => console.log("error while uploading a vid " , error))
       }
