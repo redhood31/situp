@@ -195,6 +195,7 @@ async def process_vid(path, processed_path):
     loading_precent[uuid] = True
     records_txt.close()
     out.release()
+    cv2.destroyAllWindows()
 
 
 

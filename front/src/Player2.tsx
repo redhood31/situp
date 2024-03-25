@@ -15,7 +15,7 @@ function Player({name}){
     const [status, setStatus] = useState(0);
     const ref = useRef(0);
     const [sockets, setSockets] = useState([])
-    const [noFile, setNoFile] = useState(false);
+    const [noFile, setNoFile] = useState(true);
     const [recordAngle, recordInterval, recordReps, setRecordsUrl, onSeek] = useGetRecords();
 
     const chooseRef = useRef()
